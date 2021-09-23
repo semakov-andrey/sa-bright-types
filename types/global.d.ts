@@ -4,7 +4,7 @@ type ObjectKey = string | number | symbol;
 
 type ObjectType<T = unknown> = Record<ObjectKey, T>;
 
-type ObjectDefType<K extends string | number | symbol, T = unknown> = Record<K, T>;
+type ObjectDefType<K extends ObjectKey, T = unknown> = Record<K, T>;
 
 type Nullable<T> = T | null;
 
