@@ -1,0 +1,27 @@
+{
+  "name": "sa-bright-types",
+  "version": "1.0.0",
+  "description": "sa-bright-types",
+  "bin": "./install.js",
+  "author": "Semakov Andrey",
+  "license": "ISC",
+  "keywords": [
+    "node",
+    "npm",
+    "yarn",
+    "react",
+    "typescript",
+    "types",
+    "guards",
+    "generator",
+    "template"
+  ],
+  "type": "module",
+  "scripts": {
+    "install-types": "node install.js"
+  },
+  "dependencies": {
+    "commander": "^8.2.0",
+    "copy-dir": "^1.3.0"
+  }
+}
