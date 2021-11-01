@@ -37,3 +37,6 @@ interface Array<T> {
 }
 
 type Modify<T, R> = Omit<T, KeyOf<R>> & R;
+
+type PromiseResolve<T> = (value: T) => void;
+type PromiseReject<T> = (error: T) => void;
