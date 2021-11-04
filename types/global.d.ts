@@ -10,9 +10,7 @@ type Nullable<T> = T | null;
 
 type Optional<T> = T | undefined;
 
-type ResolveType = (value: unknown) => void;
-
-type RejectType = (reason?: unknown) => void;
+type OneOrMore<T> = T | Array<T>;
 
 type ArrayInnerType<T> = T extends Array<infer R> ? R : never;
 
@@ -39,4 +37,8 @@ interface Array<T> {
 type Modify<T, R> = Omit<T, KeyOf<R>> & R;
 
 type PromiseResolve<T> = (value: T) => void;
-type PromiseReject<T> = (error: T) => void;
+
+type PromiseReject<T> = (reason?: T) => void;
+
+type UnionToIntersection<U> =
+  (U extends unknown ? (k: U) => void : never) extends ((k: infer I) => void) ? I : never;
