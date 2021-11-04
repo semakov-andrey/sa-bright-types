@@ -1,6 +1,6 @@
 {
   "name": "sa-bright-types",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "sa-bright-types",
   "bin": "./install.js",
   "author": "Semakov Andrey",
