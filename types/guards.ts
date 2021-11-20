@@ -35,6 +35,10 @@ export const isTypeNumber = (u: unknown): u is number =>
 export const isTypeString = (u: unknown): u is string =>
   typeof u === 'string';
 
+export const isEmptyNumber = (u: unknown): boolean => u === 0;
+
 export const isEmptyString = (u: unknown): boolean => u === '';
+
+export const isFilledNumber = (u: unknown): u is number => isset(u) && isTypeNumber(u) && !isEmptyNumber(u);
 
 export const isFilledString = (u: unknown): u is string => isset(u) && isTypeString(u) && !isEmptyString(u);
